@@ -51,6 +51,11 @@ h2{
         background-repeat: no-repeat;
     }
 
+    .mark{
+        display: flex;
+        justify-content: flex-end;
+    }
+
 
     h2{
         font-size: 1.75rem;
