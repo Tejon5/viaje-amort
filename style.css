@@ -14,6 +14,11 @@ body{
     background-repeat: no-repeat;
 }
 
+.mark{
+    display: flex;
+    justify-content: flex-end;
+}
+
 h2{
     font-size: 5rem;
     font-weight: bold;
