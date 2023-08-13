@@ -46,8 +46,14 @@ h2{
 /** Responsive **/
 @media only screen and (max-width: 600px) {
     body {
-        background-image: url('./fondoboke.jpeg');
+        background-image: url('./fondobokeresponsive.jpeg');
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+
+    h2{
+        font-size: 2rem;
+        font-weight: bold;
     }
   }
