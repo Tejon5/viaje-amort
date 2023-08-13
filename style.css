@@ -59,6 +59,7 @@ h2{
     .mark{
         display: flex;
         justify-content: flex-end;
+        font-size: 0.5;
     }
 
 
