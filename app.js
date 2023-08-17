@@ -1,6 +1,6 @@
 const countdown = () =>{
     //con esta funcion determinamos la fecha de referancia sobre la cual se va a determinar el countdown
-    const countDate = new Date('Aug 18, 2023 21:30:00').getTime()
+    const countDate = new Date('Aug 23, 2023 21:30:00').getTime()
 
     //con esta funcion determinamos la fecha de ahora
     const now = new Date().getTime()
