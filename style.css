@@ -22,7 +22,9 @@ body{
 .mark-p{
     font-size: 1rem;
     font-style: italic;
+    font-weight: bold;
     margin-right: 10px;
+    text-decoration: none;
 }
 
 h2{
