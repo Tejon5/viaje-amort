@@ -21,7 +21,6 @@ body{
 }
 .mark-p{
     font-size: 1rem;
-    font-style: italic;
     font-weight: bold;
     margin-right: 10px;
     text-decoration: none;
@@ -71,8 +70,7 @@ h2{
     }
     .mark-p{
         font-size: 10px;
-        font-style: italic;
-        margin-right: 10px;
+        margin: 10px;
     }
 
     h2{
