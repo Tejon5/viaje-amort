@@ -1,9 +1,11 @@
 const countdown = () =>{
     //con esta funcion determinamos la fecha de referancia sobre la cual se va a determinar el countdown
-    const countDate = new Date('Aug 30, 2023 21:30:00').getTime()
+    /*const countDate = new Date('Aug 30, 2023 21:30:00').getTime()*/
+    const countDate = new Date('Aug 30, 2023 21:30:00');
 
     //con esta funcion determinamos la fecha de ahora
-    const now = new Date().getTime()
+    /*const now = new Date().getTime()*/
+    const now = new Date();
 
     //El gap es la diferencia entre los valores arriba preestablecidos para que se ejecute el countdown
     const gap = countDate-now
@@ -32,6 +34,8 @@ const countdown = () =>{
     document.querySelector('.second').innerHTML =  textSeconds;
 
 }
+
+
 
 setInterval(() => {
     countdown();
