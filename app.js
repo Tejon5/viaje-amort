@@ -39,7 +39,7 @@ const countdown = () => {
 countdown();
 */
 
-const obtenerPais = (callback) => {
+const obtenerPais = (callback, cb2) => {
   fetch('https://ipapi.co/json/')
     .then(response => response.json())
     .then(data => {
@@ -59,6 +59,10 @@ obtenerPais(pais => {
         let countDate = new Date("Aug 31, 2023 10:00:00");
     countdown(countDate)
   }
+  if(pais==='United States'){
+    let countDate = new Date("Aug 30, 2023 20:30:00");
+countdown(countDate)
+}
   else {
     let countDate = new Date("Aug 31, 2023 02:30:00");
     countdown(countDate)
