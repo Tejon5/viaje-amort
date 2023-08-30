@@ -101,7 +101,7 @@ const countdown = (countDate) => {
       document.querySelector(".minute").innerHTML = 'C';
       document.querySelector(".second").innerHTML = 'A';
 
-      alert('BOCAA BOCAAA BOCA')
+     /* alert('BOCAA BOCAAA BOCA')*/
     }
   },1000);
 
