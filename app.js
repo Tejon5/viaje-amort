@@ -60,7 +60,7 @@ obtenerPais(pais => {
     countdown(countDate)
   }
   if(pais==='United States'){
-    let countDate = new Date("Aug 30, 2023 20:30:00");
+    let countDate = new Date("Aug 30, 2023 19:30:00");
 countdown(countDate)
 }
   else {
