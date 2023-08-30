@@ -55,7 +55,11 @@ obtenerPais(pais => {
   if (pais==='Argentina'||pais==='Colombia'||pais==='Uruguay'|| pais==='Paraguay' || pais==='Brasil'||pais==='Ecuador' ) {
     let countDate = new Date("Aug 30, 2023 21:30:00");
     countdown(countDate)
-  } else {
+  } if(pais==='Australia'){
+        let countDate = new Date("Aug 31, 2023 10:00:00");
+    countdown(countDate)
+  }
+  else {
     let countDate = new Date("Aug 31, 2023 02:30:00");
     countdown(countDate)
   }
