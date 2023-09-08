@@ -24,6 +24,10 @@ obtenerPais(pais => {
     let countDate = new Date("Sep 10, 2023 11:30:00"); /*11.30*/
 countdown(countDate)
 }
+  else if(pais==='Mexico'){
+    let countDate = new Date("Sep 10, 2023 15:30:00"); /*19.30*/
+countdown(countDate)
+}
   else {
     let countDate = new Date("Sep 10, 2023 22:30:00"); /*22.30 */
     countdown(countDate)
