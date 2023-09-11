@@ -11,9 +11,26 @@ const obtenerPais2 = (callback) => {
     });
 }
 
+let counter = 0
+const cuantoescounter=(utc2)=>{
+  if(utc2===-300){
+    return counter;
+  }else{
+    for(let i=-300; i<=utc2; i++){
+      i=i+100;
+      counter = counter+1
+    }
+    return counter;
+  }
+}
+
+
 obtenerPais2(utc => {
-    let countDate = new Date("Sep 15, 2023 18:45:00").getTime() + Number(utc);/**17'30 */
-    countdown(countDate)
+    let utc2 = Number(utc)  
+    cuantoescounter(utc2)
+    console.log(counter)
+    let countDate = new Date("Sep 15, 2023 18:45:00").getTime()/*+utc2*/;/**17'30 */
+    countdown(countDate,counter)
 });
 
 
@@ -21,15 +38,15 @@ const cero = 0;
 /*let countDate = new Date("Aug 30, 2023 21:30:00").getTime();*/
 
 
-const countdown = (countDate) => {
-
+const countdown = (countDate,counter) => {
   let interval = setInterval(() => {
-    
-    const now = new Date().getTime();
+    const now = new Date();
+    now.setHours(now.getHours() - counter)
     let gap = countDate - now;
-    const second = 1000;
+
+    const second = 1000 ;
     const minute = second * 60;
-    const hour = minute * 60;
+    const hour = minute * 60 ;
     const day = hour * 24;
 
  
@@ -56,3 +73,5 @@ const countdown = (countDate) => {
 
  
 };
+
+
