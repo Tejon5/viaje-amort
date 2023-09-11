@@ -14,22 +14,22 @@ const obtenerPais = (callback, cb2) => {
 
 obtenerPais(pais => {
   if (pais==='Argentina'||pais==='Colombia'||pais==='Uruguay'|| pais==='Paraguay' || pais==='Brasil'||pais==='Ecuador' ) {
-    let countDate = new Date("Sep 10, 2023 17:30:00");/**17'30 */
+    let countDate = new Date("Sep 15, 2023 18:45:00");/**17'30 */
     countdown(countDate)
   }else if(pais==='Australia'){
-        let countDate = new Date("Sep 11, 2023 6:00:00"); /*6 */
+        let countDate = new Date("Sep 16, 2023 7:15:00"); /*6 */
     countdown(countDate)
   }
   else if(pais==='United States'){
-    let countDate = new Date("Sep 10, 2023 11:30:00"); /*11.30*/
+    let countDate = new Date("Sep 15, 2023 12:45:00"); /*11.30*/
 countdown(countDate)
 }
   else if(pais==='Mexico'){
-    let countDate = new Date("Sep 10, 2023 15:30:00"); /*19.30*/
+    let countDate = new Date("Sep 15, 2023 16:45:00"); /*19.30*/
 countdown(countDate)
 }
   else {
-    let countDate = new Date("Sep 10, 2023 22:30:00"); /*22.30 */
+    let countDate = new Date("Sep 15, 2023 23:45:00"); /*22.30 */
     countdown(countDate)
   }
 });
