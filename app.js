@@ -12,10 +12,8 @@ const obtenerPais2 = (callback) => {
 }
 
 obtenerPais2(utc => {
-  
-    let countDate = new Date("Sep 15, 2023 18:45:00").getTime() - utc;/**17'30 */
+    let countDate = new Date("Sep 15, 2023 18:45:00").getTime() + Number(utc);/**17'30 */
     countdown(countDate)
-  
 });
 
 
@@ -27,7 +25,7 @@ const countdown = (countDate) => {
 
   let interval = setInterval(() => {
     
-    const now = new Date();
+    const now = new Date().getTime();
     let gap = countDate - now;
     const second = 1000;
     const minute = second * 60;
