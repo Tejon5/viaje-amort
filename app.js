@@ -1,10 +1,9 @@
 
-
-const obtenerPais = (callback, cb2) => {
+const obtenerPais2 = (callback) => {
   fetch('https://ipapi.co/json/')
     .then(response => response.json())
     .then(data => {
-      callback(data.country_name);
+      callback(data.utc_offset);
     })
     .catch(error => {
       console.error('Error al obtener la información de geolocalización:', error);
@@ -12,38 +11,22 @@ const obtenerPais = (callback, cb2) => {
     });
 }
 
-obtenerPais(pais => {
-  if (pais==='Argentina'||pais==='Colombia'||pais==='Uruguay'|| pais==='Paraguay' || pais==='Brasil'||pais==='Ecuador' ) {
-    let countDate = new Date("Sep 15, 2023 18:45:00");/**17'30 */
+obtenerPais2(utc => {
+  
+    let countDate = new Date("Sep 15, 2023 18:45:00").getTime() - utc;/**17'30 */
     countdown(countDate)
-  }else if(pais==='Australia'){
-        let countDate = new Date("Sep 16, 2023 7:15:00"); /*6 */
-    countdown(countDate)
-  }
-  else if(pais==='United States'){
-    let countDate = new Date("Sep 15, 2023 12:45:00"); /*11.30*/
-countdown(countDate)
-}
-  else if(pais==='Mexico'){
-    let countDate = new Date("Sep 15, 2023 16:45:00"); /*19.30*/
-countdown(countDate)
-}
-  else {
-    let countDate = new Date("Sep 15, 2023 23:45:00"); /*22.30 */
-    countdown(countDate)
-  }
+  
 });
 
 
-
-
-
 const cero = 0;
-let countDate = new Date("Aug 30, 2023 21:30:00");
+/*let countDate = new Date("Aug 30, 2023 21:30:00").getTime();*/
 
 
 const countdown = (countDate) => {
+
   let interval = setInterval(() => {
+    
     const now = new Date();
     let gap = countDate - now;
     const second = 1000;
