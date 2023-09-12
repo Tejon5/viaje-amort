@@ -11,16 +11,27 @@ const obtenerPais2 = (callback) => {
     });
 }
 
-let counter = 0
+/*Variables para las horas*/
+let counter = 0;
+let counter2 = 0;
 const cuantoescounter=(utc2)=>{
   if(utc2===-300){
-    return counter;
-  }else{
+    return counter, counter2;
+  }
+  else if(utc2<-300){
+    for(let i=utc2; i<=-300 ; i++){
+      i+=i+100;
+      counter2=counter2+1;
+    }
+    return counter, counter2;
+  }
+
+  else{
     for(let i=-300; i<=utc2; i++){
       i=i+100;
       counter = counter+1
     }
-    return counter;
+    return counter, counter2;
   }
 }
 
@@ -28,9 +39,8 @@ const cuantoescounter=(utc2)=>{
 obtenerPais2(utc => {
     let utc2 = Number(utc)  
     cuantoescounter(utc2)
-   /* console.log(counter)*/
     let countDate = new Date("Sep 15, 2023 18:45:00").getTime()/*+utc2*/;/**17'30 */
-    countdown(countDate,counter)
+    countdown(countDate,counter,counter2)
 });
 
 
@@ -38,10 +48,10 @@ const cero = 0;
 /*let countDate = new Date("Aug 30, 2023 21:30:00").getTime();*/
 
 
-const countdown = (countDate,counter) => {
+const countdown = (countDate,counter, counter2) => {
   let interval = setInterval(() => {
     const now = new Date();
-    now.setHours(now.getHours() - counter)
+    now.setHours(now.getHours() - counter + counter2)
     let gap = countDate - now;
 
     const second = 1000 ;
