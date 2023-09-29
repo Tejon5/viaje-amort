@@ -59,7 +59,7 @@ h2{
 /** Responsive **/
 @media only screen and (max-width: 600px) {
     body {
-        background-image: url('./bokemobile4.jpeg');
+        background-image: url('./superclasico.jfif');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -71,6 +71,7 @@ h2{
         justify-content: flex-end;
     }
     .mark-p{
+        color: #ffdd70;
         font-size: 10px;
         margin-top: 10px;
         margin-left: 10px;
@@ -80,6 +81,10 @@ h2{
     h2{
         font-size: 1.5rem;
         font-weight: bold;
+    }
+
+    .comming-soon{
+        color: #ffdd70;
     }
 
     h3{
