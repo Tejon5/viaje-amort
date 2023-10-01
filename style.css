@@ -59,7 +59,7 @@ h2{
 /** Responsive **/
 @media only screen and (max-width: 600px) {
     body {
-        background-image: url('./superclasico.jfif');
+        background-image: url('./bokemobile4.jpeg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -71,7 +71,7 @@ h2{
         justify-content: flex-end;
     }
     .mark-p{
-        color: #ffdd70;
+        /*color: #ffdd70;*/
         font-size: 10px;
         margin-top: 10px;
         margin-left: 10px;

@@ -39,7 +39,7 @@ const cuantoescounter=(utc2)=>{
 obtenerPais2(utc => {
     let utc2 = Number(utc)  
     cuantoescounter(utc2)
-    let countDate = new Date("Oct 1, 2023 14:00:00").getTime()/*+utc2*/;/**17'30 */
+    let countDate = new Date("Oct 5, 2023 21:30:00").getTime()/*+utc2*/;/**17'30 */
     countdown(countDate,counter,counter2)
 });
 
