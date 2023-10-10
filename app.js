@@ -14,26 +14,20 @@ const obtenerPais2 = (callback) => {
 /*Variables para las horas*/
 let counter = 0;
 let counter2 = 0;
-const cuantoescounter=(utc2)=>{
-  if(utc2===-300){
-    return counter, counter2;
+const cuantoescounter = (utc2) => {
+  let counter = Math.floor(Math.abs(utc2) / 100);
+  let counter2 = (Math.abs(utc2) % 100) / 60;
+  if (utc2 < 0) {
+    counter = -counter;
+    counter2 = -counter2;
   }
-  else if(utc2<-300){
-    for(let i=utc2; i<=-300 ; i++){
-      i+=i+100;
-      counter2=counter2+1;
+  else {
+    for (let i = -300; i <= utc2; i += 100) {
+      counter++;
     }
-    return counter, counter2;
-  }
-
-  else{
-    for(let i=-300; i<=utc2; i++){
-      i=i+100;
-      counter = counter+1
-    }
-    return counter, counter2;
-  }
-}
+ }
+  return { counter, counter2 };
+};
 
 
 obtenerPais2(utc => {
