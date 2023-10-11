@@ -11,7 +11,7 @@ const obtenerPais2 = (callback) => {
     });
 }
 
-/*Variables para las horas*/
+/*Variables para las horas
 let counter = 0;
 let counter2 = 0;
 const cuantoescounter = (utc2) => {
@@ -26,8 +26,33 @@ const cuantoescounter = (utc2) => {
       counter++;
     }
  }
-  return { counter, counter2 };
-};
+  return  counter, counter2 ;
+};*/
+
+/*Variables para las horas*/
+let counter = 0;
+let counter2 = 0;
+const cuantoescounter=(utc2)=>{
+ /* if(utc2===-300){
+    return counter, counter2;
+  }
+  else */if(utc2<-300){
+    for(let i=utc2; i<=-300 ; i++){
+      i+=i+100;
+      counter2=counter2+1;
+    }
+    return counter, counter2;
+  }
+
+  else{
+    for (let i = -300; i <= utc2; i += 100){
+      counter = counter+1
+    }
+    return counter, counter2;
+  }
+}
+
+
 
 
 obtenerPais2(utc => {
