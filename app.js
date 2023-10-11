@@ -70,7 +70,7 @@ const cero = 0;
 const countdown = (countDate,counter, counter2) => {
   let interval = setInterval(() => {
     const now = new Date();
-    now.setHours(now.getHours() - counter + counter2)
+    now.setHours(now.getHours() - counter) + counter2;
     let gap = countDate - now;
 
     const second = 1000 ;
