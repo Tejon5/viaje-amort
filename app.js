@@ -33,10 +33,10 @@ const cuantoescounter = (utc2) => {
 let counter = 0;
 let counter2 = 0;
 const cuantoescounter=(utc2)=>{
- /* if(utc2===-300){
+ if(utc2===-300){
     return counter, counter2;
   }
-  else */if(utc2<-300){
+  if(utc2<-300){
     for(let i=utc2; i<=-300 ; i++){
       i+=i+100;
       counter2=counter2+1;
