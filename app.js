@@ -30,28 +30,27 @@ const cuantoescounter = (utc2) => {
 };*/
 
 /*Variables para las horas*/
-let counter = 0;
-let counter2 = 0;
-const cuantoescounter=(utc2)=>{
- if(utc2===-300){
-    return counter, counter2;
+let state = ''
+let utc3 = -300;
+let result =  0;
+const cuantoescounter = (utc2, utc3) => {
+  if(utc2===utc3){
+    state = 'igual'
+    return result, state
   }
-  if(utc2<-300){
-    for(let i=utc2; i<=-300 ; i++){
-      i+=i+100;
-      counter2=counter2+1;
+    if(utc2>utc3){
+    let num = utc2-utc3;
+    result = num/100
+    state = 'mayor'
+    return result, state
     }
-    return counter, counter2;
+     else if(utc2<utc3){
+    let num = utc3-utc2;
+    result = num/100
+    state = 'menor'
+    return result,state
   }
-
-  else{
-    for (let i = -300; i <= utc2; i -= 100){
-      i = i -100;
-      counter = counter+1
-    }
-    return counter, counter2;
-  }
-}
+};
 
 
 
@@ -60,7 +59,7 @@ obtenerPais2(utc => {
     let utc2 = Number(utc)  
     cuantoescounter(utc2)
     let countDate = new Date("Oct 28, 2023 19:00:00").getTime()/*+utc2*/;/**17'30 */
-    countdown(countDate,counter,counter2)
+    countdown(countDate,result,state)
 });
 
 
@@ -68,10 +67,17 @@ const cero = 0;
 /*let countDate = new Date("Aug 30, 2023 21:30:00").getTime();*/
 
 
-const countdown = (countDate,counter, counter2) => {
+const countdown = (countDate,result,state) => {
   let interval = setInterval(() => {
-    const now = new Date();
-    now.setHours(now.getHours() - counter) + counter2;
+    let now = new Date();
+
+    if(state==='igual' || state === 'mayor'){
+      now.setHours(now.getHours() - result)
+    
+    }else if(state==='menor'){
+      now.setHours(now.getHours() + result)
+    
+    }
     let gap = countDate - now;
 
     const second = 1000 ;
