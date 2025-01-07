@@ -63,6 +63,10 @@ h2{
     font-weight: 600;
 }
 
+.logo{
+    max-width: 1200px; height: 266px; margin: 0px; width: 266px;
+}
+
 /** Responsive **/
 @media only screen and (max-width: 600px) {
     body {
