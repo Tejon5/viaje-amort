@@ -71,6 +71,13 @@ h2{
     vertical-align: bottom;
 }
 
+.tournament{
+    background-color: #fbcb5b;
+    color: #133b5b;
+    padding: 0px 7px;
+    border-radius: 5px;
+}
+
 
 
 /** Responsive **/
