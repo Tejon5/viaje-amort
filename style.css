@@ -130,4 +130,12 @@ h2{
         align-items: flex-end;
         margin: 7px;
     }
+
+    .logovs{
+        width: 14px;
+        height: 14px;
+        margin: 0px; 
+        padding: 0px;
+        vertical-align: bottom;
+    }
   }
