@@ -72,8 +72,9 @@ h2{
 }
 
 .tournament{
-    background-color: #fbcb5b;
-    color: #133b5b;
+    /*background-color: #fbcb5b;*/
+    background-color: #133b5b;
+    color: #FAFAFA;
     padding: 0px 7px;
     border-radius: 5px;
     margin-bottom: 5px;
