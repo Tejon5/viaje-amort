@@ -142,6 +142,9 @@ h2{
   }
 
   @media only screen and (max-width: 375px) {
+    .comming-soon{
+        margin-right: 15px;
+    }
     h2{
         font-size: 1.2rem;
     }
