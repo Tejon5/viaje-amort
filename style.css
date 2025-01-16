@@ -140,3 +140,18 @@ h2{
         vertical-align: bottom;
     }
   }
+
+  @media only screen and (max-width: 375px) {
+    h2{
+        font-size: 1.2rem;
+    }
+
+    .day, .hour, .minute, .second{
+        font-size: 11px;
+    }
+
+    .container-rival{
+        font-size: 10px;
+        margin: 5px;
+    }
+  }
