@@ -73,7 +73,7 @@ h2{
 .container-rival{
     display:flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     margin: 15px;
     font-weight: 600;
 }
@@ -161,7 +161,7 @@ h2{
         font-size: 12px;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         margin: 7px;
     }
 
