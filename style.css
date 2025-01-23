@@ -55,7 +55,7 @@ h2{
     height: 50vh;
 }
 
-.container-data{
+/*.container-data{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
@@ -149,13 +149,7 @@ h2{
         font-weight: bold;
     }
 
-  /*  .container-date{
-        font-size: 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        margin: 7px;
-    }*/
+
 
     .container-rival{
         font-size: 12px;
