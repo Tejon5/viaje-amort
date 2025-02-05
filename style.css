@@ -7,11 +7,17 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Lato', sans-serif;
-    background-image: url('./fondoboke.jpeg');
+    background-image: url('./images/horizonte.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita scroll si no querés que se mueva */
 }
 
 .mark{
@@ -111,7 +117,7 @@ h2{
 /** Responsive **/
 @media only screen and (max-width: 600px) {
     body {
-        background-image: url('./bokemobile4.jpeg');
+        background-image: url('./images/amort1.jpeg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -137,7 +143,7 @@ h2{
     }
 
     .comming-soon{
-        color:#000;
+        color:#fff;
     }
 
     h3{
